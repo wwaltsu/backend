@@ -1,3 +1,4 @@
+assistant-backend/.eslintrc.js
 # Logs
 logs
 *.log
@@ -128,3 +129,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+eslint
+assistant-backend/.eslintrc.js

@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config()
 const express = require("express")
 const app = express()
 const mysql = require("mysql")
@@ -9,11 +9,11 @@ app.use(express.json())
 
 
 var db = mysql.createConnection({
-  user : process.env.USERDB,
-  password : process.env.PASSWORD,
-  host : process.env.HOST,
-  database : process.env.DATABASE
-});
+  user: process.env.USERDB,
+  password: process.env.PASSWORD,
+  host: process.env.HOST,
+  database: process.env.DATABASE
+})
 
 // ***** GOALS *****
 
@@ -40,14 +40,14 @@ app.post("/goals", (req, res) => {
       (err, result) => {
         if (err) {
           console.log(err)
-          return res.status(400);
+          return res.status(400)
         } else {
-          return res.status(200).send("Values Inserted");
+          return res.status(200).send("Values Inserted")
         }
       }
     )
   } catch (error) {
-    return res.status(400).send(error);
+    return res.status(400).send(error)
   }
 
 })
